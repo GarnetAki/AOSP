@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="main_button_color">#FF0D1C5A</color>
+    <color name="main_button_color_selected">#FF070F32</color>
+    <color name="second_button_color">#FF0F78A1</color>
+    <color name="number_button_color">#FFA3D7EC</color>
+
+    <color name="error">#FFA80000</color>
+    <color name="accept_background">#293F98</color>
+</resources>

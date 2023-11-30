@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_margin">0.8pt</dimen>
+    <dimen name="accept_margin">10dp</dimen>
+    <dimen name="accept_hor_margin">40dp</dimen>
+    <dimen name="num_pad_height">15pt</dimen>
+</resources>

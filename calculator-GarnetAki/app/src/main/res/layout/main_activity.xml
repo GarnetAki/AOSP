@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintGuide_percent="0.05"
+    tools:targetApi="o" >
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="106pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answerText"
+        app:layout_constraintVertical_bias="0.95">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="16pt"
+            android:layout_margin="@dimen/layout_margin">
+
+            <Button
+                android:id="@+id/input_x"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="2"
+                android:autoSizeMaxTextSize="18pt"
+                android:autoSizeMinTextSize="10pt"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/main_button_bg"
+                android:onClick="focusChange"
+                android:text="@string/input_x"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/x_value"
+                android:layout_width="0dp"
+                android:layout_gravity="bottom"
+                android:layout_height="18pt"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_marginTop="20dp"
+                android:layout_weight="2"
+                android:autoSizeMaxTextSize="18pt"
+                android:autoSizeMinTextSize="12pt"
+                android:autoSizeTextType="uniform"
+                android:textAlignment="center"
+                android:focusable="false"
+                android:cursorVisible="false"
+                android:focusableInTouchMode="true"
+                android:singleLine="true"
+                android:text="@string/zero"
+                android:textColor="@color/main_button_color"
+                tools:ignore="LabelFor,RtlCompat" />
+
+            <Button
+                android:id="@+id/input_y"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="2"
+                android:autoSizeMaxTextSize="18pt"
+                android:autoSizeMinTextSize="10pt"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/main_button_bg"
+                android:onClick="focusChange"
+                android:text="@string/input_y"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/y_value"
+                android:layout_width="0dp"
+                android:layout_height="18pt"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="2"
+                android:singleLine="true"
+                android:focusable="false"
+                android:autoSizeMaxTextSize="18pt"
+                android:autoSizeMinTextSize="12pt"
+                android:autoSizeTextType="uniform"
+                android:cursorVisible="false"
+                android:focusableInTouchMode="true"
+                android:text="@string/zero"
+                android:textAlignment="center"
+                android:textColor="@color/main_button_color"
+                tools:ignore="LabelFor,RtlCompat" />
+
+            <Button
+                android:id="@+id/input_z"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="2"
+                android:autoSizeMaxTextSize="18pt"
+                android:autoSizeMinTextSize="10pt"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/main_button_bg"
+                android:onClick="focusChange"
+                android:text="@string/input_z"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/z_value"
+                android:layout_width="0dp"
+                android:layout_height="18pt"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="2"
+                android:focusable="false"
+                android:singleLine="true"
+                android:cursorVisible="false"
+                android:focusableInTouchMode="true"
+                android:text="@string/zero"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:autoSizeMaxTextSize="18pt"
+                android:autoSizeMinTextSize="12pt"
+                android:autoSizeTextType="uniform"
+                tools:ignore="LabelFor,RtlCompat" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="18pt">
+
+            <Button
+                android:id="@+id/parenthesesBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/main_button_bg"
+                android:onClick="onClick"
+                android:text="@string/parentheses"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/lnBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/second_button_bg"
+                android:onClick="onClick"
+                android:text="@string/ln"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/rootBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/second_button_bg"
+                android:onClick="onClick"
+                android:text="@string/root"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/divideBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/second_button_bg"
+                android:onClick="onClick"
+                android:text="@string/divide"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/backspaceBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/main_button_bg"
+                android:onClick="onClick"
+                android:text="@string/backspace"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="18pt">
+
+            <Button
+                android:id="@+id/sevenBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/numbers_button_bg"
+                android:onClick="onClick"
+                android:text="@string/seven"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/eightBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/numbers_button_bg"
+                android:onClick="onClick"
+                android:text="@string/eight"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/nineBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/numbers_button_bg"
+                android:onClick="onClick"
+                android:text="@string/nine"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/multiplyBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/second_button_bg"
+                android:onClick="onClick"
+                android:text="@string/multiply"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/xBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/second_button_bg"
+                android:onClick="onClick"
+                android:text="@string/x"
+                android:textColor="@color/white" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="20pt">
+
+            <Button
+                android:id="@+id/fourBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/numbers_button_bg"
+                android:onClick="onClick"
+                android:text="@string/four"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/fiveBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/numbers_button_bg"
+                android:onClick="onClick"
+                android:text="@string/five"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/sixBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/numbers_button_bg"
+                android:onClick="onClick"
+                android:text="@string/six"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/subtractBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/second_button_bg"
+                android:onClick="onClick"
+                android:text="@string/subtract"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/yBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/second_button_bg"
+                android:onClick="onClick"
+                android:text="@string/y"
+                android:textColor="@color/white" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="18pt">
+
+            <Button
+                android:id="@+id/oneBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/numbers_button_bg"
+                android:onClick="onClick"
+                android:text="@string/one"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/twoBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/numbers_button_bg"
+                android:onClick="onClick"
+                android:text="@string/two"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/threeBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/numbers_button_bg"
+                android:onClick="onClick"
+                android:text="@string/three"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/addBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/second_button_bg"
+                android:onClick="onClick"
+                android:text="@string/add"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/zBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/second_button_bg"
+                android:onClick="onClick"
+                android:text="@string/z"
+                android:textColor="@color/white" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="18pt">
+
+            <Button
+                android:id="@+id/clearBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/main_button_bg"
+                android:onClick="onClick"
+                android:text="@string/clear"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/zeroBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/numbers_button_bg"
+                android:onClick="onClick"
+                android:text="@string/zero"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/pointBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/main_button_bg"
+                android:onClick="onClick"
+                android:text="@string/point"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/signBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/second_button_bg"
+                android:onClick="onClick"
+                android:text="@string/sign"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/calculateBTN"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/num_pad_height"
+                android:layout_margin="@dimen/layout_margin"
+                android:layout_weight="1"
+                android:autoSizeMaxTextSize="18sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/main_button_bg"
+                android:onClick="onClick"
+                android:text="@string/calculate"
+                android:textColor="@color/white" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="match_parent"
+        android:layout_height="24pt"
+        android:layout_margin="@dimen/layout_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03">
+
+        <Button
+            android:id="@+id/input"
+            android:layout_width="0dp"
+            android:layout_height="24pt"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/layout_margin"
+            android:layout_weight="1"
+            android:background="@drawable/main_button_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="focusChange"
+            android:text="@string/input"
+            android:autoSizeMaxTextSize="16sp"
+            android:autoSizeMinTextSize="10sp"
+            android:autoSizeTextType="uniform"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/displayText"
+            android:layout_width="0dp"
+            android:layout_height="24pt"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="6"
+            android:focusable="false"
+            android:singleLine="true"
+            android:cursorVisible="false"
+            android:focusableInTouchMode="true"
+            android:text="@string/empty_input"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:autoSizeMaxTextSize="26pt"
+            android:autoSizeMinTextSize="12pt"
+            android:autoSizeTextType="uniform"
+            tools:ignore="LabelFor" />
+
+    </TableRow>
+
+    <EditText
+        android:id="@+id/answerText"
+        android:layout_width="0dp"
+        android:layout_height="24pt"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_weight="6"
+        android:focusable="false"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:cursorVisible="false"
+        android:text="@string/empty_input"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:autoSizeMaxTextSize="26pt"
+        android:autoSizeMinTextSize="12pt"
+        android:autoSizeTextType="uniform"
+        tools:ignore="LabelFor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
