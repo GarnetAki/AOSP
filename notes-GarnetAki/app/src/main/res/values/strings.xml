@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="search">Search..</string>
+    <string name="search_description">Search</string>
+    <string name="add_note_description">Add Note</string>
+    <string name="add_folder_description">Add Folder</string>
+    <string name="bin_description">Bin</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="content">Note text</string>
+    <string name="title">Title</string>
+    <string name="color">Color</string>
+    <string name="expand">Expand</string>
+    <string name="back">Back</string>
+    <string name="restore">Restore</string>
+    <string name="folder_title">Folder Name</string>
+</resources>

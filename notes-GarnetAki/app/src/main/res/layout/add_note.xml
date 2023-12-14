@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_color">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/search_bg">
+
+            <Spinner
+                android:id="@+id/static_spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_bg"
+            android:layout_margin="16dp">
+
+            <EditText
+                android:id="@+id/noteTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp"
+                android:background="@null"
+                android:ems="7"
+                android:inputType="text"
+                android:singleLine="true"
+                android:hint ="@string/title"
+                android:textColorHint="@color/main_color"
+                android:textStyle="bold"
+                android:textColor="@color/main_color"
+                android:textSize="36sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_bg"
+            android:layout_margin="16dp">
+
+            <EditText
+                android:id="@+id/noteText"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp"
+                android:background="@null"
+                android:ems="7"
+                android:gravity="top|left"
+                android:layout_weight ="1"
+                android:inputType="textCapSentences|textMultiLine"
+                android:scrollHorizontally="false"
+                android:maxHeight="600dp"
+                android:minHeight="200dp"
+                android:scrollbarThumbVertical="@color/main_bg_color"
+                android:hint ="@string/content"
+                android:textColorHint="@color/main_color"
+                android:maxLines ="8"
+                android:textColor="@color/main_color"
+                android:textSize="24sp"
+                android:importantForAutofill="no" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/empty_tall_divider"
+        android:showDividers="middle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.9">
+
+        <Button
+            android:id="@+id/addNote"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/main_button_bg"
+            android:minWidth="128dp"
+            android:minHeight="64dp"
+            android:onClick="createNote"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/main_color"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/bin"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/main_button_bg"
+            android:minWidth="128dp"
+            android:minHeight="64dp"
+            android:onClick="cancel"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/main_color"
+            android:textSize="28sp" />
+    </TableRow>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
