@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">images-GarnetAki</string>
+    <integer name="com_vk_sdk_AppId">51837375</integer>
+
+    <string name="picture">picture</string>
+    <string name="log_in">Log In</string>
+    <string name="log_out">Log Out</string>
+    <string name="find_albums">Find Albums</string>
+
+    <string name="empty_id">ID: -</string>
+    <string name="id">ID: </string>
+</resources>

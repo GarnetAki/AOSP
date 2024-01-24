@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05">
+
+        <ImageButton
+            android:id="@+id/VKLogin"
+            android:padding="8dp"
+            android:layout_margin="4dp"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:onClick="buttonClicked"
+            android:background="@drawable/main_button_bg"
+            android:contentDescription="@string/log_in"
+            android:src="@drawable/login"
+            android:scaleType="fitCenter"
+            android:textSize="16sp">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/VKLogout"
+            android:padding="8dp"
+            android:layout_margin="4dp"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:onClick="buttonClicked"
+            android:background="@drawable/main_button_bg"
+            android:contentDescription="@string/log_out"
+            android:src="@drawable/logout"
+            android:scaleType="fitCenter"
+            android:textSize="16sp">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/FindAlbums"
+            android:padding="8dp"
+            android:layout_margin="4dp"
+            android:layout_width="64dp"
+            android:layout_height="48dp"
+            android:onClick="buttonClicked"
+            android:background="@drawable/main_button_bg"
+            android:contentDescription="@string/find_albums"
+            android:src="@drawable/reload"
+            android:scaleType="fitCenter"
+            android:textSize="16sp">
+
+        </ImageButton>
+
+    </TableRow>
+
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow1"
+        app:layout_constraintVertical_bias="0.03">
+
+        <TextView
+            android:id="@+id/login_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textSize="16sp">
+
+        </TextView>
+
+    </TableRow>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow2"
+        app:layout_constraintVertical_bias="0.20"
+        app:spanCount="2"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
